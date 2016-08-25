@@ -20,20 +20,48 @@
 
 // ** added by rcn: 08/10/16** //
 // ** Heroku Postgres settings - from Heroku Environment ** //
-$db = parse_url($_ENV["DATABASE_URL"] ? $_ENV["DATABASE_URL"] : "postgres://wordpress:wordpress@localhost:5432/wordpress");
+// $db = parse_url($_ENV["DATABASE_URL"] ? $_ENV["DATABASE_URL"] : "postgres://wordpress:wordpress@localhost:5432/wordpress");
 
+//-----------------------------------------------
+// rcn: 08/10/16 - LOCALHOST default settings.
+//-----------------------------------------------
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
+//  define('DB_NAME', 'wordpress');
+//
+//  /** MySQL database username */
+//  define('DB_USER', 'root');
+//
+//  /** MySQL database password */
+//  define('DB_PASSWORD', 'root');
+//
+//  /** MySQL hostname */
+//  define('DB_HOST', 'localhost');
+//-----------------------------------------------
+
+//-----------------------------------------------
+// rcn: 08/10/16 - HEROKU, gitHub settings.
+//-----------------------------------------------
+//  Web URL:       https://wordpress-contact-plugin-94037.herokuapp.com/
+//  Rays-MacBook-Pro:wordpress raynovarina$ git remote -v
+//  heroku  https://git.heroku.com/wordpress-contact-plugin-94037.git (fetch)
+//  origin  https://github.com/RayNovarina/wordpress-contact-form.git (fetch)
+//  Rays-MacBook-Pro:wordpress raynovarina$ pwd
+//  /Applications/MAMP/htdocs/Sites/wordpress
+//  Rays-MacBook-Pro:wordpress raynovarina$ heroku config
+//  === wordpress-contact-plugin-94037 Config Vars
+//  CLEARDB_DATABASE_URL: mysql://bde834cab31ef5:c8269d2a@us-cdbr-iron-east-04.cleardb.net/heroku_630e8ec1c3a94ec?reconnect=true
+/** The name of the database for WordPress */
+define('DB_NAME', 'heroku_630e8ec1c3a94ec');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'bde834cab31ef5');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'c8269d2a');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'us-cdbr-iron-east-04.cleardb.net');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
