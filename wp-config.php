@@ -27,16 +27,16 @@
 //-----------------------------------------------
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-//  define('DB_NAME', 'wordpress');
+// define('DB_NAME', 'wordpress');
 //
 //  /** MySQL database username */
-//  define('DB_USER', 'root');
+// define('DB_USER', 'root');
 //
 //  /** MySQL database password */
-//  define('DB_PASSWORD', 'root');
+// define('DB_PASSWORD', 'root');
 //
 //  /** MySQL hostname */
-//  define('DB_HOST', 'localhost');
+// define('DB_HOST', 'localhost');
 //-----------------------------------------------
 
 //-----------------------------------------------
@@ -51,6 +51,7 @@
 //  Rays-MacBook-Pro:wordpress raynovarina$ heroku config
 //  === wordpress-contact-plugin-94037 Config Vars
 //  CLEARDB_DATABASE_URL: mysql://bde834cab31ef5:c8269d2a@us-cdbr-iron-east-04.cleardb.net/heroku_630e8ec1c3a94ec?reconnect=true
+//
 /** The name of the database for WordPress */
 define('DB_NAME', 'heroku_630e8ec1c3a94ec');
 
@@ -63,6 +64,7 @@ define('DB_PASSWORD', 'c8269d2a');
 /** MySQL hostname */
 define('DB_HOST', 'us-cdbr-iron-east-04.cleardb.net');
 
+// Common db connection fields.
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
 

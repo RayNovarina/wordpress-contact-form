@@ -13,7 +13,7 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<?php
 		// Start the loop.
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) : miado_trim_content(10);
 
 			// Include the single post content template.
 			get_template_part( 'template-parts/content', 'single' );
